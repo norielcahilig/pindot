@@ -4,7 +4,7 @@ $lon = $_POST['longitude'];
 $user = $_POST['user'];
 $accuracy = $_POST['accuracy'];
 
-$conn = new mysqli("your_mysql_host", "your_mysql_user", "your_mysql_password", "your_mysql_db");
+$conn = new mysqli("mysql.railway.internal", "root", "IxCCroSfWKaBIInDuRIzxnpLReHUxhbY", "railway");
 
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
