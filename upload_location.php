@@ -4,7 +4,7 @@ $lon = $_POST['longitude'];
 $user = $_POST['user'];
 $accuracy = $_POST['accuracy'];
 
-$conn = new mysqli("yamabiko.proxy.rlwy.net", "root", "kVmAdxNLIqNrheJTvXcZFBTvWddLnTYp", "railway");
+$conn = new mysqli("yamabiko.proxy.rlwy.net", "root", "kVmAdxNLIqNrheJTvXcZFBTvWddLnTYp", "railway", 3306);
 
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
