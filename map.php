@@ -1,5 +1,11 @@
 <?php
 $conn = new mysqli("yamabiko.proxy.rlwy.net", "root", "kVmAdxNLIqNrheJTvXcZFBTvWddLnTYp", "railway");
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+echo "Connected successfully";
+
 $result = $conn->query("SELECT latitude, longitude FROM locations ORDER BY timestamp DESC LIMIT 1");
 $row = $result->fetch_assoc();
 $lat = $row['latitude'];
